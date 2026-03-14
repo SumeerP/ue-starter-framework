@@ -1,0 +1,127 @@
+[
+    {
+        "id": "hero",
+        "fields": [
+            {
+                "component": "text",
+                "name": "title",
+                "value": "",
+                "label": "Title",
+                "valueType": "string"
+            }
+        ]
+    },
+    {
+        "id": "title",
+        "fields": [
+            {
+                "component": "text",
+                "name": "title",
+                "value": "",
+                "label": "Title",
+                "valueType": "string"
+            }
+        ]
+    },
+    {
+        "id": "richtext",
+        "fields": [
+            {
+                "component": "richtext",
+                "name": "text",
+                "value": "",
+                "label": "Text",
+                "valueType": "string"
+            }
+        ]
+    },
+    {
+        "id": "image",
+        "fields": [
+            {
+                "component": "text",
+                "name": "altText",
+                "value": "",
+                "label": "Alt Text",
+                "valueType": "string"
+            },
+            {
+                "component": "text",
+                "name": "caption",
+                "value": "",
+                "label": "Caption",
+                "valueType": "string"
+            }
+        ]
+    },
+    {
+        "id": "cta",
+        "fields": [
+            {
+                "component": "text",
+                "name": "label",
+                "value": "",
+                "label": "Button Label",
+                "valueType": "string"
+            },
+            {
+                "component": "text",
+                "name": "url",
+                "value": "",
+                "label": "URL",
+                "valueType": "string"
+            },
+            {
+                "component": "select",
+                "name": "variant",
+                "value": "primary",
+                "label": "Variant",
+                "valueType": "string",
+                "options": [
+                    {
+                        "name": "Primary",
+                        "value": "primary"
+                    },
+                    {
+                        "name": "Secondary",
+                        "value": "secondary"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "columnlayout",
+        "fields": [
+            {
+                "component": "select",
+                "name": "layout",
+                "value": "2-col-equal",
+                "label": "Layout",
+                "valueType": "string",
+                "options": [
+                    {
+                        "name": "2 Column Equal",
+                        "value": "2-col-equal"
+                    },
+                    {
+                        "name": "2 Column Wide Left",
+                        "value": "2-col-wide-left"
+                    },
+                    {
+                        "name": "2 Column Wide Right",
+                        "value": "2-col-wide-right"
+                    },
+                    {
+                        "name": "3 Column Equal",
+                        "value": "3-col-equal"
+                    },
+                    {
+                        "name": "3 Column Wide Center",
+                        "value": "3-col-wide-center"
+                    }
+                ]
+            }
+        ]
+    }
+]

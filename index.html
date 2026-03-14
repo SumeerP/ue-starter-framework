@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="description" content="Starter Studio — Creative Agency Portfolio built with AEM + Universal Editor" />
+  <title>Starter Studio</title>
+
+  <!-- UE Component, Model, and Filter Definitions -->
+  <script type="application/vnd.adobe.aue.component+json" src="/ue-starter-framework/static/component-definition.json"></script>
+  <script type="application/vnd.adobe.aue.filter+json" src="/ue-starter-framework/static/filter-definition.json"></script>
+  <script type="application/vnd.adobe.aue.model+json" src="/ue-starter-framework/static/model-definition.json"></script>
+
+  <!-- Universal Editor CORS Library (Adobe-hosted) -->
+  <script>
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const corsUrl = urlParams.get('cors') === "stage"
+        ? 'https://universal-editor-service-stage.adobe.io/cors.js'
+        : 'https://universal-editor-service.adobe.io/cors.js';
+
+      const script = document.createElement('script');
+      script.src = corsUrl;
+      script.async = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <script type="module" crossorigin src="/ue-starter-framework/assets/index-Bxkt2QXS.js"></script>
+  <link rel="stylesheet" crossorigin href="/ue-starter-framework/assets/index-DiAmJNlW.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+
+</html>

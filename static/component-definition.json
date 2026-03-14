@@ -1,0 +1,114 @@
+{
+    "groups": [
+        {
+            "title": "Content Components",
+            "id": "content",
+            "components": [
+                {
+                    "title": "Hero",
+                    "id": "hero",
+                    "model": "hero",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/hero",
+                                "template": {
+                                    "title": "Default Hero Title"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Title",
+                    "id": "title",
+                    "model": "title",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/title",
+                                "template": {
+                                    "title": "Default Title"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Rich Text",
+                    "id": "richtext",
+                    "model": "richtext",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/richtext",
+                                "template": {
+                                    "text": "<p>Default rich text content</p>"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Image",
+                    "id": "image",
+                    "model": "image",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/image",
+                                "template": {}
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Call to Action",
+                    "id": "cta",
+                    "model": "cta",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/cta",
+                                "template": {
+                                    "label": "Learn More",
+                                    "url": "#"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Layout Components",
+            "id": "layout",
+            "components": [
+                {
+                    "title": "Column Layout",
+                    "id": "columnlayout",
+                    "model": "columnlayout",
+                    "filter": "columnlayout",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/columnlayout"
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Separator",
+                    "id": "separator",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "starter/components/separator"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
