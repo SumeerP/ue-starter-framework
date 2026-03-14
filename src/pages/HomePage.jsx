@@ -4,7 +4,7 @@ import PageContainer from '../containers/PageContainer';
 const HomePage = () => (
     <PageContainer
         query="vyingdigitalpartnersandboxprogram/homepage"
-        queryKey="homepageList"
+        queryKey="containerList"
         label="Home Page"
     />
 );
