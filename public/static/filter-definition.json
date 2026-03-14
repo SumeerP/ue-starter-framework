@@ -1,0 +1,24 @@
+[
+    {
+        "id": "cf",
+        "components": [
+            "hero",
+            "title",
+            "richtext",
+            "image",
+            "cta",
+            "columnlayout",
+            "separator"
+        ]
+    },
+    {
+        "id": "columnlayout",
+        "components": [
+            "hero",
+            "title",
+            "richtext",
+            "image",
+            "cta"
+        ]
+    }
+]
