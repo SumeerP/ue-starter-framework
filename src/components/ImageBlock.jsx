@@ -9,11 +9,13 @@ const ImageBlock = ({ image, altText, caption, _path, isPreview }) => {
 
     return (
         <figure className="ue-image" {...ue.container()}>
-            <div className="ue-component-bar">
-                <span className="ue-component-bar__icon">▣</span>
-                <span className="ue-component-bar__type">Image</span>
-                {altText && <span className="ue-component-bar__detail">{altText}</span>}
-            </div>
+            {!isPreview && (
+                <div className="ue-component-bar">
+                    <span className="ue-component-bar__icon">▣</span>
+                    <span className="ue-component-bar__type">Image</span>
+                    {altText && <span className="ue-component-bar__detail">{altText}</span>}
+                </div>
+            )}
             {!hasData && !isPreview ? (
                 <div className="ue-placeholder">
                     <p>Click to add an image</p>

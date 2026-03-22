@@ -54,8 +54,11 @@
 }
 
 // Component type bar — always-visible label at top of each component
+// Hidden by default; shown only in UE Edit mode via:
+//   1. JS: {!isPreview && <div className="ue-component-bar">}
+//   2. CSS fallback: body.adobe-ue-edit (set by UE CORS library)
 .ue-component-bar {
-    display: flex;
+    display: none; // Hidden by default — CSS safety net
     align-items: center;
     gap: $spacing-sm;
     padding: $spacing-xs $spacing-sm;
@@ -91,6 +94,31 @@
             content: '—';
             margin-right: $spacing-xs;
         }
+    }
+}
+
+// UE CORS library adds 'adobe-ue-edit' to <body> in Edit mode
+// This CSS-only fallback shows edit chrome without relying on React state
+body.adobe-ue-edit {
+    .ue-component-bar {
+        display: flex;
+    }
+
+    .ue-column-layout-wrapper {
+        border: 1px solid $color-gray-200;
+        border-radius: $radius-md;
+        overflow: hidden;
+        background: $color-gray-50;
+    }
+
+    .ue-column {
+        border: 1px dashed $color-gray-300;
+        border-radius: $radius-sm;
+        padding: $spacing-sm;
+    }
+
+    .ue-placeholder {
+        display: flex;
     }
 }
 
@@ -241,19 +269,22 @@
 // ========================================
 .ue-column-layout-wrapper {
     margin-bottom: $spacing-xl;
-    border: 1px solid $color-gray-200;
-    border-radius: $radius-md;
-    overflow: hidden;
-    background: $color-gray-50;
 
-    > .ue-component-bar {
-        border-radius: 0;
-        background: $color-gray-200;
-        border-left-color: $color-accent;
-        padding: $spacing-sm;
+    &--edit {
+        border: 1px solid $color-gray-200;
+        border-radius: $radius-md;
+        overflow: hidden;
+        background: $color-gray-50;
 
-        .ue-component-bar__icon {
-            color: $color-accent;
+        > .ue-component-bar {
+            border-radius: 0;
+            background: $color-gray-200;
+            border-left-color: $color-accent;
+            padding: $spacing-sm;
+
+            .ue-component-bar__icon {
+                color: $color-accent;
+            }
         }
     }
 }
@@ -266,9 +297,12 @@
 
 .ue-column {
     min-height: 80px;
-    border: 1px dashed $color-gray-300;
-    border-radius: $radius-sm;
-    padding: $spacing-sm;
+
+    &--edit {
+        border: 1px dashed $color-gray-300;
+        border-radius: $radius-sm;
+        padding: $spacing-sm;
+    }
 }
 
 @media (max-width: $bp-md) {

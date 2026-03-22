@@ -7,10 +7,12 @@ const RichText = ({ text, _path, isPreview }) => {
 
     return (
         <div className="ue-richtext" {...ue.container()}>
-            <div className="ue-component-bar">
-                <span className="ue-component-bar__icon">¶</span>
-                <span className="ue-component-bar__type">Rich Text</span>
-            </div>
+            {!isPreview && (
+                <div className="ue-component-bar">
+                    <span className="ue-component-bar__icon">¶</span>
+                    <span className="ue-component-bar__type">Rich Text</span>
+                </div>
+            )}
             {!hasData && !isPreview ? (
                 <div className="ue-placeholder">
                     <p>Click to add rich text content</p>

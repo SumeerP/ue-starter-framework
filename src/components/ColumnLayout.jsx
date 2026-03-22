@@ -24,7 +24,7 @@ const Column = ({ references, columnProp, columnIndex, _path, isPreview }) => {
 
     return (
         <div
-            className="ue-column"
+            className={`ue-column${!isPreview ? ' ue-column--edit' : ''}`}
             data-aue-resource={`urn:aemconnection:${_path}/jcr:content/data/master`}
             data-aue-prop={columnProp}
             data-aue-type="container"
@@ -72,16 +72,18 @@ const ColumnLayout = ({ layout, column1, column2, column3, _path, isPreview }) =
 
     return (
         <div
-            className="ue-column-layout-wrapper"
+            className={`ue-column-layout-wrapper${!isPreview ? ' ue-column-layout-wrapper--edit' : ''}`}
             data-aue-resource={`urn:aemconnection:${_path}/jcr:content/data/master`}
             data-aue-type="reference"
             data-aue-filter="cf"
             data-aue-label={`Column Layout — ${layoutLabel}`}>
-            <div className="ue-component-bar">
-                <span className="ue-component-bar__icon">⬚</span>
-                <span className="ue-component-bar__type">Column Layout</span>
-                <span className="ue-component-bar__detail">{layoutLabel}</span>
-            </div>
+            {!isPreview && (
+                <div className="ue-component-bar">
+                    <span className="ue-component-bar__icon">⬚</span>
+                    <span className="ue-component-bar__type">Column Layout</span>
+                    <span className="ue-component-bar__detail">{layoutLabel}</span>
+                </div>
+            )}
             <div
                 className={`ue-column-layout col-${config.count}`}
                 style={{ gridTemplateColumns: config.grid }}>
