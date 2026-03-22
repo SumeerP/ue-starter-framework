@@ -9,9 +9,14 @@ const Hero = ({ title, image, _path, isPreview }) => {
 
     return (
         <div className={`ue-hero${imageUrl ? ' has-image' : ''}`} {...ue.container()}>
+            <div className="ue-component-bar">
+                <span className="ue-component-bar__icon">◆</span>
+                <span className="ue-component-bar__type">Hero</span>
+                {title && <span className="ue-component-bar__detail">{title}</span>}
+            </div>
             {!hasData && !isPreview ? (
                 <div className="ue-placeholder">
-                    <p>Hero Component — Add title and image</p>
+                    <p>Click to add a hero title and background image</p>
                 </div>
             ) : (
                 <>

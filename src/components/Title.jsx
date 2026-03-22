@@ -7,9 +7,14 @@ const Title = ({ title, _path, isPreview }) => {
 
     return (
         <div className="ue-title" {...ue.container()}>
+            <div className="ue-component-bar">
+                <span className="ue-component-bar__icon">T</span>
+                <span className="ue-component-bar__type">Title</span>
+                {title && <span className="ue-component-bar__detail">{title}</span>}
+            </div>
             {!hasData && !isPreview ? (
                 <div className="ue-placeholder">
-                    <p>Title Component — Click to edit</p>
+                    <p>Click to add a title</p>
                 </div>
             ) : (
                 <h3 {...ue.prop('title', 'text')}>{title || 'Untitled'}</h3>

@@ -47,8 +47,21 @@ const Column = ({ references, columnProp, columnIndex, _path, isPreview }) => {
     );
 };
 
+const LAYOUT_LABELS = {
+    '2-col-equal': '2 Columns (Equal)',
+    '2-col-wide-left': '2 Columns (Wide Left)',
+    '2-col-wide-right': '2 Columns (Wide Right)',
+    '2-col-70-30': '2 Columns (70/30)',
+    '2-col-30-70': '2 Columns (30/70)',
+    '3-col-equal': '3 Columns (Equal)',
+    '3-col-wide-center': '3 Columns (Wide Center)',
+    '3-col-wide-left': '3 Columns (Wide Left)',
+    '3-col-wide-right': '3 Columns (Wide Right)',
+};
+
 const ColumnLayout = ({ layout, column1, column2, column3, _path, isPreview }) => {
     const config = LAYOUTS[layout] || DEFAULT_LAYOUT;
+    const layoutLabel = LAYOUT_LABELS[layout] || layout || '2 Columns (Equal)';
 
     const allColumns = [
         { refs: column1, prop: 'column1', index: 1 },
@@ -59,22 +72,30 @@ const ColumnLayout = ({ layout, column1, column2, column3, _path, isPreview }) =
 
     return (
         <div
-            className={`ue-column-layout col-${config.count}`}
-            style={{ gridTemplateColumns: config.grid }}
+            className="ue-column-layout-wrapper"
             data-aue-resource={`urn:aemconnection:${_path}/jcr:content/data/master`}
             data-aue-type="reference"
             data-aue-filter="cf"
-            data-aue-label={`${config.count}-Column Layout (${layout || 'default'})`}>
-            {activeColumns.map((col) => (
-                <Column
-                    key={col.prop}
-                    references={col.refs}
-                    columnProp={col.prop}
-                    columnIndex={col.index}
-                    _path={_path}
-                    isPreview={isPreview}
-                />
-            ))}
+            data-aue-label={`Column Layout — ${layoutLabel}`}>
+            <div className="ue-component-bar">
+                <span className="ue-component-bar__icon">⬚</span>
+                <span className="ue-component-bar__type">Column Layout</span>
+                <span className="ue-component-bar__detail">{layoutLabel}</span>
+            </div>
+            <div
+                className={`ue-column-layout col-${config.count}`}
+                style={{ gridTemplateColumns: config.grid }}>
+                {activeColumns.map((col) => (
+                    <Column
+                        key={col.prop}
+                        references={col.refs}
+                        columnProp={col.prop}
+                        columnIndex={col.index}
+                        _path={_path}
+                        isPreview={isPreview}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

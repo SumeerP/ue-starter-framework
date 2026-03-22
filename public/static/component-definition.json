@@ -10,8 +10,10 @@
                     "model": "hero",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/hero",
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/hero",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Hero",
                                 "template": {
                                     "title": "Default Hero Title"
                                 }
@@ -25,8 +27,10 @@
                     "model": "title",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/title",
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/title",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Title",
                                 "template": {
                                     "title": "Default Title"
                                 }
@@ -40,8 +44,10 @@
                     "model": "richtext",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/richtext",
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/richtext",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Rich Text",
                                 "template": {
                                     "text": "<p>Default rich text content</p>"
                                 }
@@ -55,9 +61,10 @@
                     "model": "image",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/image",
-                                "template": {}
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/imageblock",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Image Block"
                             }
                         }
                     }
@@ -68,8 +75,10 @@
                     "model": "cta",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/cta",
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/cta",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New CTA",
                                 "template": {
                                     "label": "Learn More",
                                     "url": "#"
@@ -91,19 +100,23 @@
                     "filter": "columnlayout",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/columnlayout"
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/columnlayout",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Column Layout"
                             }
                         }
                     }
                 },
                 {
-                    "title": "Separator",
-                    "id": "separator",
+                    "title": "Container",
+                    "id": "container",
                     "plugins": {
                         "aem": {
-                            "page": {
-                                "resourceType": "starter/components/separator"
+                            "cf": {
+                                "cfModel": "/conf/vyingdigitalpartnersandboxprogram/settings/dam/cfm/models/container",
+                                "cfFolder": "/content/dam/vyingdigitalpartnersandboxprogram",
+                                "title": "New Container"
                             }
                         }
                     }
