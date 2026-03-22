@@ -28,6 +28,7 @@ const Column = ({ references, columnProp, columnIndex, _path, isPreview }) => {
             data-aue-resource={`urn:aemconnection:${_path}/jcr:content/data/master`}
             data-aue-prop={columnProp}
             data-aue-type="container"
+            data-aue-filter="columnlayout"
             data-aue-label={`Column ${columnIndex}`}>
             {!hasContent && !isPreview && (
                 <div className="ue-placeholder">
