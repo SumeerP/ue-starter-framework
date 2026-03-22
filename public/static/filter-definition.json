@@ -15,10 +15,7 @@
         "id": "columnlayout",
         "components": [
             "hero",
-            "title",
-            "richtext",
-            "image",
-            "cta"
+            "title"
         ]
     }
 ]
